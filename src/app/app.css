@@ -1,12 +1,45 @@
-.nav-link {
-  font-size: large;
-  cursor: pointer;
+
+/* Base color variable */
+:root {
+  --base-color: #214345;
 }
 
-.navbar-light .navbar-nav .nav-link.active {
-  color: #214345
+/* Navigation bar using CSS Grid */
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  background-color: var(--base-color);
+  padding: 0.5rem 1rem;
 }
 
 .navbar-brand {
-  margin-left: 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 0;
+}
+
+.navbar-nav {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.nav-link.active,
+.nav-link:focus,
+.nav-link:hover {
+  color: #ffd700;
 }

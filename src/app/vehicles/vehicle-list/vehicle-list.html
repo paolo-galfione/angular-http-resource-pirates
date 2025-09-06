@@ -1,23 +1,23 @@
-<div class="card">
-  <div class="card-header">
+<div class="vehicle-list-card">
+  <div class="vehicle-list-header">
     {{pageTitle}}
   </div>
-
-  <div class='card-body'>
+  <div class="vehicle-list-body">
     @if (isLoading()) {
-      <div>...Loading</div>
+      <div class="vehicle-list-loading">...Loading</div>
     } @else if (errorMessage()) {
-      <div class="alert alert-danger">
+      <div class="vehicle-list-error">
         {{errorMessage() }}
       </div>
     } @else {
-      <div class="list-group">
-          <select [(ngModel)]="selectedVehicle">
-            <option value="undefined" selected>--Select a vehicle--</option>
-            @for(vehicle of vehicles(); track vehicle) {
+      <div class="vehicle-list-select-group">
+        <select class="vehicle-list-select" [(ngModel)]="selectedVehicle">
+          <option value="undefined" selected>--Select a vehicle--</option>
+          @for(vehicle of vehicles(); track vehicle) {
             <option [ngValue]="vehicle">{{vehicle.name}}</option>
-            }
-          </select>
+          }
+        </select>
       </div>
     }
   </div>
+</div>

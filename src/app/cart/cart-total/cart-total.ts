@@ -8,7 +8,8 @@ import { VehicleService } from '../../vehicles/vehicle.service';
 @Component({
   selector: 'sw-cart-total',
   imports: [DecimalPipe, FormsModule],
-  templateUrl: './cart-total.html'
+  templateUrl: './cart-total.html',
+  styleUrls: ['./cart-total.css']
 })
 export class CartTotal {
   private cartService = inject(CartService);

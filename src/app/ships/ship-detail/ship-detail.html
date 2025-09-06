@@ -29,19 +29,15 @@
         <div class="cellRight">{{ship()?.cargo_capacity}}</div>
       </div>
 
-      @if (errorMessage()) {
-        <div class="alert alert-danger">
-          {{errorMessage() }}
-        </div>
-      } @else if (shipFilms()) {
+      @let shipFilms = ship()?.films;
+      @if (shipFilms) {
         <div class="row">
-          <div class="col-md-4">Films:</div>
-          <div class="col-md-6">
-            <ul class="list-group">
-              @for (film of shipFilms(); track film) {
-                <li class="list-group-item"
-                    style="color:cornflowerblue;font-weight: bold;">
-                  {{film.title}}
+          <div class="cellLeft">Films:</div>
+          <div class="cellRight">
+            <ul class="film-list">
+              @for (film of shipFilms; track film) {
+                <li class="film-list-item">
+                  {{film}}
                 </li>
               }
             </ul>

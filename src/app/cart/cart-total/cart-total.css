@@ -2,8 +2,6 @@
 .cart-card {
 	display: grid;
 	grid-template-rows: auto 1fr;
-	max-width: 400px;
-	margin: 2rem auto;
 	background: #fff;
 	border-radius: 10px;
 	border: 2px solid var(--base-color);
@@ -11,7 +9,7 @@
 
 .cart-header {
 	background: var(--base-color);
-	color: #fff;
+	color: var(--text-light);
 	font-size: 1.5rem;
 	font-weight: bold;
 	padding: 1rem 1rem 0.7rem 1rem;
@@ -21,15 +19,14 @@
 
 .cart-body {
 	display: grid;
-	gap: 1.2rem;
+	gap: 1rem;
 	padding: 1.5rem 1.2rem 2rem 1.2rem;
 }
 
 .cart-row {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: .7fr 1fr;
 	align-items: center;
-	gap: 0.5rem;
 }
 .cart-label {
 	font-size: 1rem;

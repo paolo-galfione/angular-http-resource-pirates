@@ -19,7 +19,12 @@ export class ShipData {
       cargo_capacity: 80,
       price: 0,
       crew: 100,
-      films: ['Pirates of the Caribbean'],
+      films: ['Pirates of the Caribbean:The Curse of the Black Pearl',
+        'Pirates of the Caribbean: Dead Man\'s Chest',
+        'Pirates of the Caribbean: At World\'s End',
+        'Pirates of the Caribbean: On Stranger Tides',
+        'Pirates of the Caribbean: Dead Men Tell No Tales'
+      ],
       manufacturer: "London Docks",
       model: "East Indiaman",
       name: "Black Pearl",

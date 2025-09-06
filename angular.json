@@ -8,7 +8,7 @@
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "swv",
+      "prefix": "pss",
       "architect": {
         "build": {
           "builder": "@angular/build:application",

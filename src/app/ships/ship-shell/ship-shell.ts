@@ -4,23 +4,22 @@ import { ShipDetail } from "../ship-detail/ship-detail";
 import { CartTotal } from '../../cart/cart-total/cart-total';
 
 @Component({
-    selector: 'sw-ship-shell',
-    template: `
-    <div class='row'>
-      <div class='col-md-6'>
-        <sw-ship-list/>
+  selector: 'sw-ship-shell',
+  template: `
+    <div class="body">
+      <div class="list-container">
+        <sw-ship-list />
       </div>
-    </div>
-    <div class='row'>
-      <div class='col-md-6'>
-        <sw-ship-detail/>
+      <div class="detail-container">
+        <sw-ship-detail />
       </div>
-      <div class='col-md-6'>
-        <sw-cart-total/>
+      <div class="total-container">
+        <sw-cart-total />
       </div>
     </div>
   `,
-    imports: [ShipList, ShipDetail, CartTotal]
+  styleUrls: ['./ship-shell.css'],
+  imports: [ShipList, ShipDetail, CartTotal]
 })
 export class ShipShell {
 

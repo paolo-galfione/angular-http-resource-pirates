@@ -1,9 +1,9 @@
-import { Vehicle } from "./vehicle";
+import { Ship } from "./ship";
 
-export class VehicleData {
+export class ShipData {
 
   // Famous pirate ships sample data
-  static vehicles: Vehicle[] = [
+  static ships: Ship[] = [
     {
       cargo_capacity: 100,
       price: 50,
@@ -13,7 +13,7 @@ export class VehicleData {
       model: "Galleon",
       name: "Queen Anne's Revenge",
       passengers: 20,
-      vehicle_class: "pirate ship"
+      ship_class: "pirate ship"
     },
     {
       cargo_capacity: 80,
@@ -24,7 +24,7 @@ export class VehicleData {
       model: "East Indiaman",
       name: "Black Pearl",
       passengers: 10,
-      vehicle_class: "pirate ship"
+      ship_class: "pirate ship"
     },
     {
       cargo_capacity: 60,
@@ -35,7 +35,7 @@ export class VehicleData {
       model: "Brigantine",
       name: "Adventure Galley",
       passengers: 15,
-      vehicle_class: "pirate ship"
+      ship_class: "pirate ship"
     },
     {
       cargo_capacity: 120,
@@ -46,7 +46,7 @@ export class VehicleData {
       model: "Frigate",
       name: "Royal Fortune",
       passengers: 25,
-      vehicle_class: "pirate ship"
+      ship_class: "pirate ship"
     },
     {
       cargo_capacity: 90,
@@ -57,7 +57,7 @@ export class VehicleData {
       model: "Schooner",
       name: "Flying Dutchman",
       passengers: 12,
-      vehicle_class: "ghost ship"
+      ship_class: "ghost ship"
     },
     {
       cargo_capacity: 70,
@@ -68,7 +68,7 @@ export class VehicleData {
       model: "Barque",
       name: "Jolly Roger",
       passengers: 8,
-      vehicle_class: "pirate ship"
+      ship_class: "pirate ship"
     },
     {
       cargo_capacity: 110,
@@ -79,7 +79,7 @@ export class VehicleData {
       model: "Man-of-war",
       name: "Revenge",
       passengers: 18,
-      vehicle_class: "pirate ship"
+      ship_class: "pirate ship"
     },
     {
       cargo_capacity: 85,
@@ -90,7 +90,7 @@ export class VehicleData {
       model: "Xebec",
       name: "Whydah Gally",
       passengers: 14,
-      vehicle_class: "pirate ship"
+      ship_class: "pirate ship"
     },
     {
       cargo_capacity: 95,
@@ -101,7 +101,7 @@ export class VehicleData {
       model: "Sloop",
       name: "Royal James",
       passengers: 9,
-      vehicle_class: "pirate ship"
+      ship_class: "pirate ship"
     },
     {
       cargo_capacity: 130,
@@ -112,7 +112,7 @@ export class VehicleData {
       model: "Junk",
       name: "Empress",
       passengers: 30,
-      vehicle_class: "pirate ship"
+      ship_class: "pirate ship"
     }
   ]
 }

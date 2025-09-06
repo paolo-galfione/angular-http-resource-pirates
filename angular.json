@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "swVehicles": {
+    "swShips": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -53,10 +53,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "swVehicles:build:production"
+              "buildTarget": "swShips:build:production"
             },
             "development": {
-              "buildTarget": "swVehicles:build:development"
+              "buildTarget": "swShips:build:development"
             }
           },
           "defaultConfiguration": "development"

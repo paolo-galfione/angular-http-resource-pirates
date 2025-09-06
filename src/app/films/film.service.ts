@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, computed, effect, inject } from '@angular/core';
 import { forkJoin} from 'rxjs';
 import { rxResource } from '@angular/core/rxjs-interop';
-import { VehicleService } from '../vehicles/vehicle.service';
+import { ShipService } from '../ships/ship.service';
 import { Film } from './film';
 import { getNestedError } from '../utils/error-handling';
 
@@ -11,11 +11,11 @@ import { getNestedError } from '../utils/error-handling';
 })
 export class FilmService {
   private http = inject(HttpClient);
-  private vehicleService = inject(VehicleService);
+  private shipService = inject(ShipService);
 
   // Retrieve data with rxResource: Best for complex data
-  vehicleFilmsResource = rxResource({
-    params: this.vehicleService.selectedVehicle,
+  shipFilmsResource = rxResource({
+    params: this.shipService.selectedShip,
     stream: p => forkJoin(p.params.films.map(link =>
       this.http.get<Film>(link)
     )),
@@ -23,7 +23,7 @@ export class FilmService {
   });
   // Manage the error message in the service
   // OR in the component
-  // error = this.vehicleFilmsResource.error;
+  // error = this.shipFilmsResource.error;
   // errorMessage = computed(() => {
   //   const err = this.error();
   //   if (err) {
@@ -35,9 +35,9 @@ export class FilmService {
 
   // Accessing the resource generates an error if the http request fails
   private eff = effect(() => {
-    let err = this.vehicleFilmsResource.error()
+    let err = this.shipFilmsResource.error()
     if (!err) {
-      console.log('Films', JSON.stringify(this.vehicleFilmsResource.value()));
+      console.log('Films', JSON.stringify(this.shipFilmsResource.value()));
     } else {
       console.error('Failed to load films', getNestedError(err));
     }

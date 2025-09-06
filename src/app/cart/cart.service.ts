@@ -1,20 +1,20 @@
 import { Injectable, computed, effect, inject, linkedSignal } from "@angular/core";
-import { VehicleService } from "../vehicles/vehicle.service";
+import { ShipService } from "../ships/ship.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
-  private vehicleService = inject(VehicleService);
+  private shipService = inject(ShipService);
 
   // Manage state with signals
   quantity = linkedSignal({
-    source: this.vehicleService.selectedVehicle,
+    source: this.shipService.selectedShip,
     computation: v => 1
   });
   // quantity = signal(1);
 
-  price = computed(() => this.vehicleService.selectedVehicle()?.price ?? 0);
+  price = computed(() => this.shipService.selectedShip()?.price ?? 0);
 
   // Total before delivery and tax
   subTotal = computed(() => this.quantity() * this.price());

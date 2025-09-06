@@ -8,5 +8,5 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
     styleUrls: ['./app.css']
 })
 export class App {
-  pageTitle = 'Star Wars Vehicle Sales';
+  pageTitle = 'Pirate Ship Sales';
 }

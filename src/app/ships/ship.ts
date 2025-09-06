@@ -1,4 +1,4 @@
-export interface Vehicle {
+export interface Ship {
   cargo_capacity: number;
   crew: number;
   name: string;
@@ -6,6 +6,6 @@ export interface Vehicle {
   manufacturer: string,
   price: number,
   passengers: number;
-  vehicle_class: string;
+  ship_class: string;
   films: string[];
 }

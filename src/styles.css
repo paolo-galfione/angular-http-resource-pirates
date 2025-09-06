@@ -1,24 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Color variable */
+:root {
+  --accent-color: #B22222; /* Crimson Red – bold, for headings/links */
+  --base-color: #214345; /* Dark Teal – primary text color */
+  --secondary-accent: #D4AF37; /* Gold – highlights, borders, callouts */
+  --background-dark: #0B0B0B; /* Deep Black – base background */
+  --background-alt: #1C3F60; /* Sea Blue – section or card backgrounds */
+  --background-light: #EBDECD; /* Light background areas */
+  --text-light: #EBDECD; /* Main text on dark backgrounds */
+}
+/* #E2C797 */
+ 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: var(--background-light);
+  color: var(--base-color);
 }
 
-div.card-header {
- background-color: cornflowerblue;
- color: white;
- font-size: large;
- font-weight: bold;
-}
-
-div.card {
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.table {
-  margin-top: 10px;
-}

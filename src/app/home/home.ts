@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.css']
 })
 export class Home {
-  public pageTitle = 'Welcome to Star Wars Vehicle Sales';
+  public pageTitle = 'Welcome to Pirate Ship Sales';
 
 }

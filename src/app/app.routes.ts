@@ -5,9 +5,9 @@ import { Home } from './home/home';
 export const routes: Routes = [
   { path: 'home', component: Home },
   {
-    path: 'vehicles',
+    path: 'ships',
     loadComponent: () => 
-      import('./vehicles/vehicle-shell/vehicle-shell').then(c => c.VehicleShell)
+      import('./ships/ship-shell/ship-shell').then(c => c.ShipShell)
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFound }

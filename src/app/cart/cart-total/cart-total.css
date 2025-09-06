@@ -1,8 +1,4 @@
 /* Cart Total grid and color styles */
-:root {
-	--base-color: #214345;
-}
-
 .cart-card {
 	display: grid;
 	grid-template-rows: auto 1fr;
@@ -10,7 +6,6 @@
 	margin: 2rem auto;
 	background: #fff;
 	border-radius: 10px;
-	box-shadow: 0 2px 10px rgba(33,67,69,0.10);
 	border: 2px solid var(--base-color);
 }
 
@@ -20,7 +15,7 @@
 	font-size: 1.5rem;
 	font-weight: bold;
 	padding: 1rem 1rem 0.7rem 1rem;
-	border-radius: 10px 10px 0 0;
+	border-radius: 8px 8px 0 0;
 	text-align: center;
 }
 
@@ -36,9 +31,7 @@
 	align-items: center;
 	gap: 0.5rem;
 }
-
 .cart-label {
-	color: var(--base-color);
 	font-size: 1rem;
 }
 .cart-bold {
@@ -46,7 +39,6 @@
 }
 .cart-value {
 	text-align: right;
-	color: var(--base-color);
 	font-size: 1rem;
 }
 .cart-qty-input {
@@ -61,7 +53,6 @@
 	font-weight: bold;
 }
 .cart-total {
-	color: #ffd700;
 	font-weight: bold;
 	font-size: 1.1rem;
 }

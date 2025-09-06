@@ -3,7 +3,7 @@ import { DecimalPipe } from '@angular/common';
 
 import { CartService } from '../cart.service';
 import { FormsModule } from '@angular/forms';
-import { VehicleService } from '../../vehicles/vehicle.service';
+import { ShipService } from '../../ships/ship.service';
 
 @Component({
   selector: 'sw-cart-total',
@@ -13,10 +13,10 @@ import { VehicleService } from '../../vehicles/vehicle.service';
 })
 export class CartTotal {
   private cartService = inject(CartService);
-  private vehicleService = inject(VehicleService);
+  private shipService = inject(ShipService);
 
   // Signals used in the UI
-  selectedVehicle = this.vehicleService.selectedVehicle;
+  selectedShip = this.shipService.selectedShip;
   price = this.cartService.price;
   quantity = this.cartService.quantity;
 

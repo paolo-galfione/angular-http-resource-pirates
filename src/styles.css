@@ -4,7 +4,7 @@
 :root {
   --accent-color: #B22222; /* Crimson Red – bold, for headings/links */
   --base-color: #214345; /* Dark Teal – primary text color */
-  --secondary-accent: #d2bf9f; /* Gold – highlights, borders, callouts */
+  --secondary-accent: #EBDECD; /* Gold – highlights, borders, callouts */
   --background-dark: #0B0B0B; /* Deep Black – base background */
   --background-alt: #1C3F60; /* Sea Blue – section or card backgrounds */
   --background-light: #EBDECD; /* Light background areas */
@@ -16,7 +16,11 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: var(--background-light);
+  background: linear-gradient(
+    270deg,
+    var(--background-light) 0%,
+    #D2C2A6 100%
+  );
   color: var(--base-color);
 }
 

@@ -22,15 +22,18 @@
   padding: 1.5rem 1.2rem 2rem 1.2rem;
 }
 
-.ship-list-loading,
-.ship-list-error {
-  text-align: center;
+.ship-list-loading {
+  text-align: left;
   color: var(--base-color);
   font-weight: bold;
+  margin: 1em;
 }
 
 .ship-list-error {
   color: #b00020;
+  text-align: left;
+  font-weight: bold;
+  margin: 1em;
 }
 
 .ship-list-select-group {

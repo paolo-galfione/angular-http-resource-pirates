@@ -26,7 +26,7 @@
 .row {
 	display: grid;
 	grid-template-columns: .6fr 1fr;
-	align-items: center;
+	align-items: top;
 }
 
 .cellLeft {
@@ -47,13 +47,19 @@
 	padding: 0;
 	margin: 0;
 }
+
 .film-list-item {
-	color: cornflowerblue;
-	font-weight: bold;
-	background: #f6faff;
-	border-radius: 6px;
-	margin-bottom: 0.3rem;
-	padding: 0.4rem 0.8rem;
-	font-size: 1rem;
-	border: 1px solid #e0e7ef;
+  color: var(--accent-color); /* Crimson Red for text */
+  font-weight: bold;
+  background: var(--background-light); /* Light background */
+  border-radius: 6px;
+  margin-bottom: 0.3rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  border: 1px solid var(--secondary-accent); /* Gold border */
+  transition: background 0.2s, color 0.2s;
+}
+.film-list-item:hover {
+  background: var(--secondary-accent); /* Gold highlight on hover */
+  color: var(--base-color); /* Dark teal text on hover */
 }

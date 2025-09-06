@@ -6,7 +6,7 @@ export class ShipData {
   static ships: Ship[] = [
     {
       cargo_capacity: 100,
-      price: 50,
+      price: 50000,
       crew: 150,
       films: ['Treasure Island', 'Black Sails'],
       manufacturer: "Port Royal Shipyards",
@@ -17,7 +17,7 @@ export class ShipData {
     },
     {
       cargo_capacity: 80,
-      price: 0,
+      price: 80000,
       crew: 100,
       films: ['Pirates of the Caribbean:The Curse of the Black Pearl',
         'Pirates of the Caribbean: Dead Man\'s Chest',
@@ -33,7 +33,7 @@ export class ShipData {
     },
     {
       cargo_capacity: 60,
-      price: 0,
+      price: 40000,
       crew: 80,
       films: ['Cutthroat Island'],
       manufacturer: "Spanish Main",
@@ -44,7 +44,7 @@ export class ShipData {
     },
     {
       cargo_capacity: 120,
-      price: 0,
+      price:25000,
       crew: 200,
       films: ['Blackbeard: Terror at Sea'],
       manufacturer: "Bristol Shipyards",
@@ -55,7 +55,7 @@ export class ShipData {
     },
     {
       cargo_capacity: 90,
-      price: 0,
+      price: 20000,
       crew: 60,
       films: ['Pirates of the Caribbean: Dead Man\'s Chest'],
       manufacturer: "Tortuga Shipwrights",
@@ -66,7 +66,7 @@ export class ShipData {
     },
     {
       cargo_capacity: 70,
-      price: 0,
+      price: 75000,
       crew: 50,
       films: ['Peter Pan'],
       manufacturer: "Neverland Docks",
@@ -77,7 +77,7 @@ export class ShipData {
     },
     {
       cargo_capacity: 110,
-      price: 0,
+      price: 30000,
       crew: 120,
       films: ['The Sea Hawk'],
       manufacturer: "Portsmouth Naval Yard",
@@ -88,7 +88,7 @@ export class ShipData {
     },
     {
       cargo_capacity: 85,
-      price: 0,
+      price: 45000,
       crew: 90,
       films: ['Pirates: Blood Brothers'],
       manufacturer: "Barbary Coast Shipbuilders",
@@ -99,7 +99,7 @@ export class ShipData {
     },
     {
       cargo_capacity: 95,
-      price: 0,
+      price: 50000,
       crew: 70,
       films: ['Pirate Hunter'],
       manufacturer: "Jamaica Shipyards",
@@ -110,7 +110,7 @@ export class ShipData {
     },
     {
       cargo_capacity: 130,
-      price: 0,
+      price: 60000,
       crew: 160,
       films: ['Pirates of the Caribbean: At World\'s End'],
       manufacturer: "Singapore Shipwrights",

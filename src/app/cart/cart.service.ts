@@ -19,8 +19,8 @@ export class CartService {
   // Total before delivery and tax
   subTotal = computed(() => this.quantity() * this.price());
 
-  // Delivery is free if spending more than 10 gold coins
-  deliveryFee = computed(() => this.subTotal() < 10 ? 4 : 0);
+  // Delivery is free if spending more than 50000 gold coins
+  deliveryFee = computed(() => this.subTotal() < 50000 ? 999 : 0);
 
   // Tax could be based on shipping address zip code
   tax = computed(() => Math.round(this.subTotal() * 10.75) / 100);

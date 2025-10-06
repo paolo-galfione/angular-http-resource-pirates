@@ -29,15 +29,14 @@
         <div class="cellRight">{{ship()?.cargo_capacity}}</div>
       </div>
 
-      @let shipFilms = ship()?.films;
-      @if (shipFilms) {
+      @if (films()) {
         <div class="row">
           <div class="cellLeft">Films:</div>
           <div class="cellRight">
             <ul class="film-list">
-              @for (film of shipFilms; track film) {
+              @for (film of films(); track film) {
                 <li class="film-list-item">
-                  {{film}}
+                  {{film.title}}
                 </li>
               }
             </ul>

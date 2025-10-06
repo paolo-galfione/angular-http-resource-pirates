@@ -1,4 +1,5 @@
 export interface Ship {
+  ship_id: number;
   cargo_capacity: number;
   crew: number;
   name: string;
@@ -7,5 +8,4 @@ export interface Ship {
   price: number,
   passengers: number;
   ship_class: string;
-  films: string[];
 }

@@ -115,14 +115,8 @@ export class ShipDetail {
 ## Show the code in the template
 
 ## Change the selectedShip to a linkedSignal
-
   selectedShip = linkedSignal<Ship[], Ship | undefined>({
     source: this.shipsResource.value,
-    computation: (ships, previous) => {
-      if (ships) {
-        // Retain the prior selection
-        return ships.find(ship => ship.name === previous?.value?.name) ?? ships[0];
-      }
-      return undefined;
-    }
+    computation: (ships, previous) =>
+      ships.find(ship => ship.name === previous?.value?.name) ?? undefined
   });

@@ -13,13 +13,8 @@ export class ShipService {
 
   selectedShip = linkedSignal<Ship[], Ship | undefined>({
     source: this.shipsResource.value,
-    computation: (ships, previous) => {
-      if (ships) {
-        // Retain the prior selection
-        return ships.find(ship => ship.name === previous?.value?.name) ?? ships[0];
-      }
-      return undefined;
-    }
+    computation: (ships, previous) =>
+      ships.find(ship => ship.name === previous?.value?.name) ?? undefined
   });
 
   // Accessing the resource generates an error if the http request fails

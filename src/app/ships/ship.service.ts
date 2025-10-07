@@ -1,5 +1,5 @@
 import { httpResource } from '@angular/common/http';
-import { Injectable, effect, signal } from '@angular/core';
+import { Injectable, effect, linkedSignal, signal } from '@angular/core';
 import { Ship } from './ship';
 
 @Injectable({
@@ -8,11 +8,19 @@ import { Ship } from './ship';
 export class ShipService {
   private url = 'api/ships';
 
-  // Expose signals from this service
-  selectedShip = signal<Ship | undefined>(undefined);
-
   // Retrieve data with httpResource: simpliest/most flexible
-  shipsResource = httpResource<Ship[]>(() => this.url, {defaultValue: []});
+  shipsResource = httpResource<Ship[]>(() => this.url, { defaultValue: [] });
+
+  selectedShip = linkedSignal<Ship[], Ship | undefined>({
+    source: this.shipsResource.value,
+    computation: (ships, previous) => {
+      if (ships) {
+        // Retain the prior selection
+        return ships.find(ship => ship.name === previous?.value?.name) ?? ships[0];
+      }
+      return undefined;
+    }
+  });
 
   // Accessing the resource generates an error if the http request fails
   private eff = effect(() => {

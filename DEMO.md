@@ -41,6 +41,8 @@ export class ShipList {
   error = signal<Error|undefined>(undefined);
   errorMessage = computed(() => this.error() ? this.error()?.message : '');
 
+  refreshData() {
+  }
 }
 
 ## Replace the film.service.ts file with this:
@@ -85,7 +87,6 @@ export class ShipDetail {
 
 }
 
-
 ## Start the application!
 
 ## Add code to retrieve the ships using httpResource (ship.service.ts)
@@ -96,6 +97,11 @@ export class ShipDetail {
   isLoading = this.shipService.shipsResource.isLoading;
   error = this.shipService.shipsResource.error;
 
+## Add the refresh code
+  refreshData() {
+    this.shipService.shipsResource.reload();
+  }
+
 ## Show the code in the template
 
 ## Add code to retrieve the films using httpResource and a parameter (film.service.ts)
@@ -105,6 +111,18 @@ export class ShipDetail {
 
 ## Adjust the code in the component (ship-detail.ts)
   films = this.filmService.filmsResource.value;
-  
+
 ## Show the code in the template
 
+## Change the selectedShip to a linkedSignal
+
+  selectedShip = linkedSignal<Ship[], Ship | undefined>({
+    source: this.shipsResource.value,
+    computation: (ships, previous) => {
+      if (ships) {
+        // Retain the prior selection
+        return ships.find(ship => ship.name === previous?.value?.name) ?? ships[0];
+      }
+      return undefined;
+    }
+  });
